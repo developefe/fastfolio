@@ -3,6 +3,7 @@ import { Link, Routes, Route, BrowserRouter } from "react-router-dom";
 import Templates from "./pages/Templates";
 import Landing from "./pages/Landing";
 import Header from "./components/Header/Header";
+import "./index.scss";
 
 function App() {
     return(
