@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: clip;
 
     h4 {
         font-weight: 600;
@@ -41,7 +41,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        overflow: hidden;
+        overflow-x: clip;
 
         &:before{
             content: "";

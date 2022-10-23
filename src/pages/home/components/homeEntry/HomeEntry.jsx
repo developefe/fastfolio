@@ -1,8 +1,6 @@
 import React from 'react';
-import "./landing-entry.scss";
-import clock from '../../assets/img/clock.svg';
-import wallet from '../../assets/img/wallet.svg';
-import rocket from '../../assets/img/rocket.svg';
+import "./home-entry.scss";
+import {clock, wallet, rocket} from '../../../../assets/img';
 
 
 export default function LandingEntry(){

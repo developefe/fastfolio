@@ -1,8 +1,9 @@
 import React from "react";
 import { Link, Routes, Route, BrowserRouter } from "react-router-dom";
 import Templates from "./pages/Templates";
-import Landing from "./pages/Landing";
+import Landing from "./pages/home/Home";
 import Header from "./components/Header/Header";
+import Footer from "./components/footer/Footer";
 import  "./index.scss";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
                     <Route path="/templates" element={<Templates />} />
                 </Routes>
             </BrowserRouter>
+            <Footer/>
         </>
     )
 }
