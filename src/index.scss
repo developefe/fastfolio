@@ -12,6 +12,10 @@ a {
     text-decoration: none;
 }
 
+::-webkit-scrollbar {width: 0px;}
+::-webkit-scrollbar-track {background-color: #01011F;}
+::-webkit-scrollbar-thumb {background-color: #F47701; border-radius: 15px;}
+
 @font-face { font-family: "Volte"; font-style: normal; font-weight: 300; src: local("Volte Light"), url("./assets/fonts/Volte-Light.woff") format("woff"); }
 @font-face { font-family: "Volte"; font-style: normal; font-weight: 400; src: local("Volte Regular"), url("./assets/fonts/Volte.woff") format("woff"); }
 @font-face { font-family: "Volte"; font-style: normal; font-weight: 500; src: local("Volte Medium"), url("./assets/fonts/Volte-Medium.woff") format("woff"); }
