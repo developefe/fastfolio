@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Routes, Route, BrowserRouter } from "react-router-dom";
+import { Link, Routes, Route, BrowserRouter, useLocation } from "react-router-dom";
 import Templates from "./pages/Templates";
 import Landing from "./pages/home/Home";
 import Header from "./components/header/Header";
@@ -8,9 +8,10 @@ import Theme1 from "./themes/theme-1/Theme1";
 import  "./index.scss";
 
 function App() {
+
     return(
         <>
-            <Header/>
+            {window.location.pathname !== "/theme1" ? ( <Header /> ) : null}
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Landing />} />
@@ -18,7 +19,7 @@ function App() {
                     <Route path="/theme1" element={<Theme1 />} />
                 </Routes>
             </BrowserRouter>
-            <Footer/>
+            {window.location.pathname !== "/theme1" ? ( <Footer /> ) : null}
         </>
     )
 }
