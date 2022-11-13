@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './style.scss';
 import './assets/js/main';
 import {mainpp} from '../../themes/theme-1/assets/img';
+import $ from 'jquery';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { useState } from 'react';
 
 function Theme1() {
+
+    const [mode, setMode] = useState('dark');
+
+    useEffect(() => {
+        $('.percent').each(function () {
+            var per = $(this).html();
+            $(this).next('.fill-percent').css('width', per);
+        })
+    }, []);
+
     return ( 
-        <div className="theme-1-body">
+        <div className="theme-1-body dark">
             <div className="entry">
                 <div className="cnt">
                     <h1 className="name wg-text"><span>Hello I'm</span> Efe Işık</h1>
@@ -22,7 +36,7 @@ function Theme1() {
                     <div className="g-title right">social</div>
                     <div className="links">
                         <a href="javascript:;" className="link-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="59.399" height="59.399" viewBox="0 0 59.399 59.399"> <path data-name="BG 1" d="M0,0H59.4V59.4H0Z" fill="none" opacity="0.58"/> <path d="M12.379,8.171v7.177h6.435c.495,0,.742.495.742.99l-.99,4.7c0,.247-.495.495-.742.495H12.379V39.6H4.954V21.784H.746A.656.656,0,0,1,0,21.041v-4.7A.656.656,0,0,1,.746,15.6H4.954V7.429A7.291,7.291,0,0,1,12.379,0h6.682A.656.656,0,0,1,19.8.746v5.94a.656.656,0,0,1-.742.742h-5.94a.656.656,0,0,0-.742.742Z" transform="translate(22.271 14.846)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/> <path d="M32.175,49.5H17.325C4.95,49.5,0,44.55,0,32.175V17.325C0,4.95,4.95,0,17.325,0h14.85C44.55,0,49.5,4.95,49.5,17.325v14.85C49.5,44.55,44.55,49.5,32.175,49.5Z" transform="translate(4.95 4.95)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/> <path d="M0,0H59.4V59.4H0Z" fill="none" opacity="0"/> </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="59.399" height="59.399" viewBox="0 0 59.399 59.399">  <path d="M12.379,8.171v7.177h6.435c.495,0,.742.495.742.99l-.99,4.7c0,.247-.495.495-.742.495H12.379V39.6H4.954V21.784H.746A.656.656,0,0,1,0,21.041v-4.7A.656.656,0,0,1,.746,15.6H4.954V7.429A7.291,7.291,0,0,1,12.379,0h6.682A.656.656,0,0,1,19.8.746v5.94a.656.656,0,0,1-.742.742h-5.94a.656.656,0,0,0-.742.742Z" transform="translate(22.271 14.846)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"></path> <path d="M32.175,49.5H17.325C4.95,49.5,0,44.55,0,32.175V17.325C0,4.95,4.95,0,17.325,0h14.85C44.55,0,49.5,4.95,49.5,17.325v14.85C49.5,44.55,44.55,49.5,32.175,49.5Z" transform="translate(4.95 4.95)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path> <path d="M0,0H59.4V59.4H0Z" fill="none" opacity="0"></path> </svg>
                         </a>
                         <a href="javascript:;" className="link-item">
                             <svg xmlns="http://www.w3.org/2000/svg" width="59.399" height="59.399" viewBox="0 0 59.399 59.399"> <path d="M17.325,49.5h14.85C44.55,49.5,49.5,44.55,49.5,32.175V17.325C49.5,4.95,44.55,0,32.175,0H17.325C4.95,0,0,4.95,0,17.325v14.85C0,44.55,4.95,49.5,17.325,49.5Z" transform="translate(4.95 4.95)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/> <path d="M0,0H59.4V59.4H0Z" fill="none" opacity="0"/> <path d="M17.325,8.662A8.662,8.662,0,1,1,8.662,0a8.662,8.662,0,0,1,8.662,8.662Z" transform="translate(21.037 21.037)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/> <path d="M.636.5h.03" transform="translate(43.013 16.825)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/> </svg>
@@ -39,6 +53,83 @@ function Theme1() {
                     </div>
                 </div>
             </div>
+            <div className="skills">
+                <div className="g-title">what i can do</div>
+                <div className="skill-list">
+                    <div className="skill-item">
+                        <div className="name">Adobe XD</div>
+                        <div className="percent">80%</div>
+                        <span className="fill-percent"></span>
+                    </div>
+                    <div className="skill-item">
+                        <div className="name">Premiere</div>
+                        <div className="percent">50%</div>
+                        <span className="fill-percent"></span>
+                    </div>
+                    <div className="skill-item">
+                        <div className="name">HTML</div>
+                        <div className="percent">100%</div>
+                        <span className="fill-percent"></span>
+                    </div>
+                    <div className="skill-item">
+                        <div className="name">Javascript</div>
+                        <div className="percent">80%</div>
+                        <span className="fill-percent"></span>
+                    </div>
+                    <div className="skill-item">
+                        <div className="name">CSS</div>
+                        <div className="percent">100%</div>
+                        <span className="fill-percent"></span>
+                    </div>
+                    <div className="skill-item">
+                        <div className="name">React.js</div>
+                        <div className="percent">80%</div>
+                        <span className="fill-percent"></span>
+                    </div>
+                </div>
+            </div>
+            <div className="soft-skills">
+                <div className="g-title">i'am..</div>
+                <Swiper
+                    spaceBetween={100}
+                    slidesPerView={1.5}
+                    centeredSlides={'true'}
+                    >
+                    <SwiperSlide>Problem Solver</SwiperSlide>
+                    <SwiperSlide>Enterprising</SwiperSlide>
+                    <SwiperSlide>Hard-Worker</SwiperSlide>
+                    <SwiperSlide>Responsible</SwiperSlide>
+                    <SwiperSlide>Reliable</SwiperSlide>
+                </Swiper>
+            </div>
+            <div className="coverletter">
+                <div className="g-title">why me</div>
+                <p className="wg-text"> I'm a Front-end developer who <span>loves</span> his job. It's been <span>3 years</span> that I'm doing this job. It's always about <span>learning</span> and <span>researching</span> for information..</p>
+            </div>
+            <div className="projects">
+                <div className="g-title">some of my projects</div>
+                <div className="project-list">
+                    <a href="javascript:;" className="project-item">
+                        <div className="link">github.com</div>
+                        <div className="name">Fake Tweet Generator</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="43.134" height="43.341" viewBox="0 0 43.134 43.341"><defs></defs><g transform="translate(0.5 0.707)"><path d="M38.112,22.386V36.43a4.682,4.682,0,0,1-4.682,4.682H7.682A4.682,4.682,0,0,1,3,36.43V10.682A4.682,4.682,0,0,1,7.682,6H21.726" transform="translate(-3 1.022)"/><path d="M15,3H29.045V17.045" transform="translate(13.09 -3)"/><line y1="25.848" x2="24.002" transform="translate(16.617)"/></g></svg>
+                    </a>
+                    <a href="javascript:;" className="project-item">
+                        <div className="link">github.com</div>
+                        <div className="name">Fake Tweet Generator</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="43.134" height="43.341" viewBox="0 0 43.134 43.341"><defs></defs><g transform="translate(0.5 0.707)"><path d="M38.112,22.386V36.43a4.682,4.682,0,0,1-4.682,4.682H7.682A4.682,4.682,0,0,1,3,36.43V10.682A4.682,4.682,0,0,1,7.682,6H21.726" transform="translate(-3 1.022)"/><path d="M15,3H29.045V17.045" transform="translate(13.09 -3)"/><line y1="25.848" x2="24.002" transform="translate(16.617)"/></g></svg>
+                    </a>
+                    <a href="javascript:;" className="project-item">
+                        <div className="link">github.com</div>
+                        <div className="name">Fake Tweet Generator</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="43.134" height="43.341" viewBox="0 0 43.134 43.341"><defs></defs><g transform="translate(0.5 0.707)"><path d="M38.112,22.386V36.43a4.682,4.682,0,0,1-4.682,4.682H7.682A4.682,4.682,0,0,1,3,36.43V10.682A4.682,4.682,0,0,1,7.682,6H21.726" transform="translate(-3 1.022)"/><path d="M15,3H29.045V17.045" transform="translate(13.09 -3)"/><line y1="25.848" x2="24.002" transform="translate(16.617)"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            <footer>
+                <a href="javascript:;">maded by fastfolio</a>
+                <a href="javascript:;">developers</a>
+            </footer>
         </div>
      );
 }
